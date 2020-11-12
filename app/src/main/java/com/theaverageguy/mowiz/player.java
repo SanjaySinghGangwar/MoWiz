@@ -1,14 +1,14 @@
-package com.sanjaysgangwar.mowiz;
+package com.theaverageguy.mowiz;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class splashScreen extends AppCompatActivity {
+public class player extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.splash_screen);
+        setContentView(R.layout.activity_player);
     }
 }

@@ -1,4 +1,4 @@
-package com.sanjaysgangwar.mowiz;
+package com.theaverageguy.mowiz;
 
 import android.content.Context;
 
