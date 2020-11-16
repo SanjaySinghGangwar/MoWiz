@@ -4,7 +4,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -41,7 +40,6 @@ public class player extends AppCompatActivity {
     PlayerView player;
     @BindView(R.id.progressBar)
     ProgressBar progressBar;
-    ImageView btFullScreen;
     SimpleExoPlayer simpleExoPlayer;
 
     @Override
@@ -49,7 +47,6 @@ public class player extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_player);
         ButterKnife.bind(this);
-        btFullScreen = player.findViewById(R.id.fullScreen);
         fullScreenLayout();
         Uri url = Uri.parse("https://drive.google.com/uc?export=download&id=1-5fRtCaaAm8KseK-tEQHhNKzBbZl-EYs");
         LoadControl loadControl = new DefaultLoadControl();
@@ -78,7 +75,6 @@ public class player extends AppCompatActivity {
     }
 
     private void fullScreenLayout() {
-        //Full Screen App
         View decorView = getWindow().getDecorView();
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         int uiOptions;
