@@ -1,4 +1,4 @@
-package com.theaverageguy.mowiz;
+package com.theaverageguy.mowiz.activity;
 
 import android.net.Uri;
 import android.os.Bundle;
@@ -24,6 +24,7 @@ import com.google.android.exoplayer2.ui.PlayerView;
 import com.google.android.exoplayer2.upstream.BandwidthMeter;
 import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter;
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory;
+import com.theaverageguy.mowiz.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
