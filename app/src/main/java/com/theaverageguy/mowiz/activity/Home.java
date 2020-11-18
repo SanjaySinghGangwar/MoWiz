@@ -29,10 +29,12 @@ public class Home extends AppCompatActivity {
     RecyclerView EMRecycler;
     @BindView(R.id.ALL)
     RecyclerView ALLRecycler;
+
     myAdapter MUMLAdapter;
     myAdapter RAAdapter;
     EMAdapter EMAdapter;
     myAdapter ALLAdapter;
+
     FirebaseRecyclerOptions<dataModel> MYULOptions;
     FirebaseRecyclerOptions<dataModel> ALLOptions;
     FirebaseRecyclerOptions<dataModel> RAOptions;

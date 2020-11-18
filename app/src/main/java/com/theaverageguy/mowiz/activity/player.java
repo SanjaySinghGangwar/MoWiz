@@ -35,8 +35,11 @@ import static android.view.View.SYSTEM_UI_FLAG_IMMERSIVE;
 import static android.view.View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
 import static android.view.View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
 import static android.view.View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+import static com.theaverageguy.mowiz.database.dataBaseRefs.baseURL;
 
 public class player extends AppCompatActivity {
+    Bundle extras;
+    String urlLink;
     @BindView(R.id.player)
     PlayerView player;
     @BindView(R.id.progressBar)
@@ -49,7 +52,13 @@ public class player extends AppCompatActivity {
         setContentView(R.layout.activity_player);
         ButterKnife.bind(this);
         fullScreenLayout();
-        Uri url = Uri.parse("https://drive.google.com/uc?export=download&id=1-5fRtCaaAm8KseK-tEQHhNKzBbZl-EYs");
+        extras = getIntent().getExtras();
+
+        if (extras != null) {
+            urlLink = extras.getString("url");
+            // and get whatever type user account id is
+        }
+        Uri url = Uri.parse(baseURL + urlLink);
         LoadControl loadControl = new DefaultLoadControl();
         BandwidthMeter bandwidthMeter = new DefaultBandwidthMeter();
         TrackSelector trackSelector = new DefaultTrackSelector(new AdaptiveTrackSelection.Factory(bandwidthMeter));
